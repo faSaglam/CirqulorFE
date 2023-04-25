@@ -1,0 +1,17 @@
+$green-background:#152728;
+$green-400: #414D41;
+$green-300:#025502;
+$green-100:#84BB25;
+$orange:#FC5E05;
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+$custom-theme-colors:(
+"green-background":#152728,
+"green-400": #414D41,
+"green-300":#025502,
+"green-100":#84BB25,
+"orange":#FC5E05
+);
+$theme-colors:map-merge($custom-theme-colors , $theme-colors );
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
