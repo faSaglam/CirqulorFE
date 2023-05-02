@@ -32,14 +32,14 @@ export const TypeOfMaterial = () => {
         return (
             <Container>
 
-                <h4 className="text-warning">There is no Suplier yet!</h4>
+                <h4 className="text-warning">There is no Supplier yet!</h4>
 
             </Container>
         )
     return (
         <Container>
             <ListGroup variant="flush">
-                <ListGroup.Item style={{ backgroundColor: "transparent", borderBottom: "#84BB25 5px dotted" }}><h4 className="text-green-100">{type.name}</h4></ListGroup.Item>
+                <ListGroup.Item style={{ backgroundColor: "transparent", borderBottom: "#84BB25 2px dotted" }}><h4 className="text-green-100">{type.name}</h4></ListGroup.Item>
                 {type.nameOfMaterialList.map((item) => (
                     < NameOfMaterialList nameOfMaterial={item} />
                 ))}
@@ -59,7 +59,7 @@ function NameOfMaterialList({ nameOfMaterial }) {
     }
     return (
         <>
-            <ListGroup.Item style={{ backgroundColor: "transparent", borderBottom: "#84BB25 2px solid" }} className=" fw-bold fs-5" key={name.id}>
+            <ListGroup.Item style={{ backgroundColor: "transparent", borderBottom: "#84BB25 1px solid" }} className=" fw-bold fs-5" key={name.id}>
                 {/* <a className="text-light" href={`/NameOfMaterial/${name.id}`} style={{ textDecoration: "none" }}>{name.name}</a> */}
                 <a className="text-light" href={`/NameOfMaterial/${name.id}`} style={{ textDecoration: "none" }}>{name.name}</a>
             </ListGroup.Item>

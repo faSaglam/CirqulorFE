@@ -38,7 +38,7 @@ export const MaterialsOfProducer = () => {
                 </Col>
                 <Col>
                     <h3 className="text-green-100">{material.nameOfMaterialName} </h3>
-                    <hr style={{ borderBottom: "#84BB25  5px dotted" }} />
+                    <hr style={{ borderBottom: "#84BB25  2px dotted" }} />
                     <h3 className="text-light">{material.producerName}  </h3>
                     <PhysicalProp x={properties.PhysicalProperties} />
                     <br />

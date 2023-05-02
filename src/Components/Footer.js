@@ -1,7 +1,7 @@
 
 import { Container, Row, Col, Nav } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
-import cirqulorLogo from '../Shares/cq_logo_frame.png'
+import cirqulorLogo from '../Shares/cq_logo_frame 2.png'
 import {
     FaTwitterSquare, FaYoutube, FaFacebookSquare, FaLinkedin, FaInstagram, FaMedium
 
@@ -10,7 +10,7 @@ export const Footer = () => {
 
     return (
         <Navbar bg="green-400" >
-            <Container fluid >
+            <Container fluid>
                 <Row >
                     <Col className='text-green-100 me-5'>
                         <Nav.Item className='fw-bold'>Live!</Nav.Item>

@@ -40,9 +40,9 @@ function BioBase({ id }) {
 
     return (
         <ListGroup variant="flush" >
-            <ListGroup.Item style={{ backgroundColor: "transparent", borderBottom: "#84BB25 10px dotted" }}><h3 className="text-green-100">{bioBase.name}</h3></ListGroup.Item>
+            <ListGroup.Item style={{ backgroundColor: "transparent", borderBottom: "#84BB25 2px dotted" }}><h2 className="text-green-100 fw-bold">{bioBase.name}</h2></ListGroup.Item>
             {types.map((item) => (
-                <ListGroup.Item style={{ backgroundColor: "transparent", borderBottom: "#84BB25 2px solid" }} className="text-light fw-bold fs-4" key={item.id}>
+                <ListGroup.Item style={{ backgroundColor: "transparent", borderBottom: "#84BB25 1px solid" }} className="text-light fs-4" key={item.id}>
                     <a className="text-light" href={`/TypeOfMaterial/${item.id}`} style={{ textDecoration: "none" }}>{item.name}</a>
                 </ListGroup.Item>
             ))}

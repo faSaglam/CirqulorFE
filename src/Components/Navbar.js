@@ -28,7 +28,7 @@ export const NavBar = () => {
 
 
                     <NavItem className='ms-2 me-2 pb-2 fw-bold'>.</NavItem>
-                    <Nav.Link className='ms-2 me-2 pb-2' href="https://cirqulor.com/" style={{ color: "#84BB25", fontSize: "32px" }} ><RiHome2Line /></Nav.Link>
+                    <Nav.Link className='ms-2 me-2 pb-2' href="https://cirqulor.com/" style={{ color: "#84BB25", fontSize: "22px" }} ><RiHome2Line /></Nav.Link>
 
                 </Navbar.Collapse>
             </Container>
