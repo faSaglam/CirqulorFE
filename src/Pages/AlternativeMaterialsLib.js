@@ -21,7 +21,7 @@ export const AlternativeMaterialsLib = () => {
 
             <Container className='mt-5 p-3' >
                 <h2 className='text-start text-light fw-bold' >Alternative Materials Library</h2>
-                <p className='text-green-100 fs-2 fw-bold'>A growing database of alternative to plastic materials making search easier than ever</p>
+                <p className='text-green-100 fs-3 fw-'>A growing database of alternative to plastic materials making search easier than ever</p>
             </Container >
             <Container fluid="sm">
                 {/* <Search /> */}
@@ -32,3 +32,4 @@ export const AlternativeMaterialsLib = () => {
     )
 
 }
+
