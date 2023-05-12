@@ -3,18 +3,41 @@ import { getAllBioBased, getBioBasedById } from "../../Services/bioBasedMaterial
 import { getAllTypes } from "../../Services/typeOfMaterialService";
 import { Container, ListGroup, Row, Col, Form, Button } from "react-bootstrap";
 import { BsFillPlayCircleFill, BsSearch } from 'react-icons/bs'
+import { SpinnerComponent } from "../../Components/Spinner";
 
 export function SearchWith() {
     const [query2, setQuery2] = useState("")
+
+    const [loading, setLoading] = useState(true);
+    console.log("1", loading)
+    function handleLoading(value) {
+        setLoading(value)
+    }
+
     function handleQueries(query) {
         setQuery2(query)
 
     }
+    if (loading === true) {
+        return (
+            <>
+                <SpinnerComponent />
+                <BioBaseList onLoading={handleLoading} />
+            </>
+
+        )
+    }
+    else {
+        console.log("me")
+    }
+
+
+
     return (
-        <Container >
+        <Container style={{ minHeight: "100vh" }} >
             <Row>
-                <BioBaseList />
-                < Col >
+                <BioBaseList onLoading={handleLoading} />
+                < Col xs={6}>
                     <SearchBar onQuery={handleQueries} />
                     <Result onSearch={query2} />
                 </Col>
@@ -22,6 +45,8 @@ export function SearchWith() {
         </Container >
 
     )
+
+
 }
 const Result = ({ onSearch }) => {
     const [results, setResults] = useState([])
@@ -85,18 +110,24 @@ const SearchBar = ({ onQuery }) => {
         </Form>
     )
 }
-const BioBaseList = () => {
+const BioBaseList = ({ onLoading }) => {
     const [bioBase, setBioBase] = useState([])
 
+
     useEffect(() => {
-        getAllBioBased().then(res => setBioBase(res))
-    }, [])
+        getAllBioBased().then(res => {
+            setBioBase(res)
+            onLoading(false)
+
+        })
+    }, [onLoading])
+
     return (
         <>
             {bioBase.map((item) =>
 
-            (<Col key={item.id}>
-                <h3 style={{ color: item.name === "Bio Plastics" ? "#84BB25" : "#FC5E05" }}>{item.name}</h3>
+            (<Col key={item.id} className="mb-2">
+                <h3 className="text-center" style={{ color: item.name === "Bio Plastics" ? "#84BB25" : "#FC5E05" }}>{item.name}</h3>
                 <BioBase id={item.id} />
             </Col>
 
@@ -105,8 +136,10 @@ const BioBaseList = () => {
 
         </>
     )
-
 }
+
+
+
 const BioBase = ({ id }) => {
 
     const [types, setTypes] = useState([])
@@ -122,10 +155,15 @@ const BioBase = ({ id }) => {
             {types.map((item) => (
 
                 <ListGroup variant="flush" key={item.id}>
-                    <ListGroup.Item style={{ backgroundColor: "transparent", borderBottom: "#84BB25 4px dotted" }} className="text-green-100 fs-5 ps-0">
-                        <a className="text-light d-flex justify-content-between" href={`/SearchWith/Type/${item.id}`} style={{ textDecoration: "none" }}>
-                            <span>{item.name}</span>
-                            <BsFillPlayCircleFill style={{ color: "#84BB25", fontSize: "32px" }} /></a>
+                    <ListGroup.Item style={{ backgroundColor: "transparent", borderBottom: "#84BB25 4px dotted" }}>
+                        <a className=" " href={`/SearchWith/Type/${item.id}`} style={{ textDecoration: "none" }}>
+                            <Row>
+                                <Col xs={8}> <span className="text-light fs-5 ps-0">{item.name}</span></Col>
+                                <Col className="d-flex align-items-center justify-content-end p-0"><BsFillPlayCircleFill className="text-green-100 fs-2" /></Col>
+                            </Row>
+
+
+                        </a>
                     </ListGroup.Item>
                 </ListGroup>
             )

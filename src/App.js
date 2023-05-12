@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import { Names } from './Pages/Name'
 // import { Source } from './Pages/Source';
 import { NavBar } from './Components/Navbar'
-import { AlternativeMaterialsLib } from './Pages/AlternativeMaterialsLib'
+// import { AlternativeMaterialsLib } from './Pages/AlternativeMaterialsLib'
 import { Footer } from './Components/Footer';
 import { TypeOfMaterial } from './Pages/TypeOfMaterials';
 import { NameOfMaterial } from './Pages/NameOfMaterial';
@@ -12,7 +12,7 @@ import { TypeSearch } from './Pages/TypeSearch';
 import { SearchAndFilterPage } from './Pages/AdvancedSearch';
 import { SearchWith } from './Pages/SearchWith/SearchWith';
 import { SearchWithType } from './Pages/SearchWith/Type';
-import { Material, SearchWithName } from './Pages/SearchWith/Name';
+import { SearchWithName } from './Pages/SearchWith/Name';
 import { MainPage } from './Pages/MainPage';
 import { AlternativeMaterial } from './Components/AlternativeMaterial';
 
