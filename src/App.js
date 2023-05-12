@@ -13,18 +13,22 @@ import { SearchAndFilterPage } from './Pages/AdvancedSearch';
 import { SearchWith } from './Pages/SearchWith/SearchWith';
 import { SearchWithType } from './Pages/SearchWith/Type';
 import { Material, SearchWithName } from './Pages/SearchWith/Name';
+import { MainPage } from './Pages/MainPage';
+import { AlternativeMaterial } from './Components/AlternativeMaterial';
 
 
 function App() {
 
 
   return (
-    <div className='bg-green-background' style={{ minHeight: "100vh" }}>
+    <div style={{}}>
       <NavBar />
+      <AlternativeMaterial />
 
       <Router>
         <Routes>
-          <Route path='' element={<AlternativeMaterialsLib />} />
+          <Route path='' element={<MainPage />} />
+          {/* <Route path='' element={<AlternativeMaterialsLib />} /> */}
           <Route path='/TypeOfMaterial/:id' element={<TypeOfMaterial />} />
           <Route path='/NameOfMaterial/:id' element={<NameOfMaterial />} />
           <Route path='/MaterialsOfProducer/:id' element={<MaterialsOfProducer />} />
@@ -33,8 +37,6 @@ function App() {
           <Route path='/SearchWith' element={<SearchWith />} />
           <Route path='/SearchWith/Type/:id' element={<SearchWithType />} />
           <Route path='/SearchWith/Name/:id' element={<SearchWithName />} />
-
-
         </Routes>
       </Router>
 

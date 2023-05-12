@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { RiHome2Line } from 'react-icons/ri'
 
-import { OffCanvas } from './OffCanvas';
+// import { OffCanvas } from './OffCanvas';
 import { NavItem } from 'react-bootstrap';
 
 
@@ -14,7 +14,7 @@ export const NavBar = () => {
             <Container fluid className=' text-green-100' style={{ maxHeight: "30px" }} >
                 {/* <Nav.Item><Nav.Link href="#home" style={{ color: '#84BB25', fontSize: "32px" }}><OffCanvas /><GiHamburgerMenu /></Nav.Link></Nav.Item> */}
 
-                <Nav.Item><OffCanvas /></Nav.Item>
+                {/* <Nav.Item><OffCanvas /></Nav.Item> */}
                 <Navbar.Collapse className="justify-content-end">
                     <Nav.Link className="fw-bold" href='https://cirqulor.com/cirqulor-platform/'>CIRQULOR</Nav.Link>
 

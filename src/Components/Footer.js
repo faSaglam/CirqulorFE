@@ -9,7 +9,7 @@ import {
 export const Footer = () => {
 
     return (
-        <Navbar bg="green-400" >
+        <Navbar bg="green-400 m-0" >
             <Container fluid>
                 <Row >
                     <Col className='text-green-100 me-5'>
