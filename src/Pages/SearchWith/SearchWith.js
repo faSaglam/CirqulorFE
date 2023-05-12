@@ -28,25 +28,20 @@ export function SearchWith() {
         )
     }
     else {
-        console.log("me")
+        return (
+            <Container style={{ minHeight: "100vh" }} >
+                <Row>
+                    <BioBaseList onLoading={handleLoading} />
+                    < Col xs={6}>
+                        <SearchBar onQuery={handleQueries} />
+                        <Result onSearch={query2} />
+                    </Col>
+                </Row>
+            </Container >
+
+        )
+
     }
-
-
-
-    return (
-        <Container style={{ minHeight: "100vh" }} >
-            <Row>
-                <BioBaseList onLoading={handleLoading} />
-                < Col xs={6}>
-                    <SearchBar onQuery={handleQueries} />
-                    <Result onSearch={query2} />
-                </Col>
-            </Row>
-        </Container >
-
-    )
-
-
 }
 const Result = ({ onSearch }) => {
     const [results, setResults] = useState([])
@@ -74,9 +69,13 @@ const Result = ({ onSearch }) => {
         <ListGroup variant="flush">
             {results.map((item) => (
                 <ListGroup.Item key={item.id} style={{ backgroundColor: "transparent", borderBottom: "gray  2px solid" }} className="text-secondary fs-5 ps-0">
-                    <a className="text-secondary d-flex justify-content-between" href={`/SearchWith/Type/${item.id}`} style={{ textDecoration: "none" }}>
-                        <span>{item.name}</span>
-                        <BsFillPlayCircleFill style={{ color: "gray", fontSize: "32px" }} />
+
+                    <a href={`/SearchWith/Type/${item.id}`} style={{ textDecoration: "none" }}>
+                        <Row>
+                            <Col xs={11}> <span className="text-secondary fs-3  ps-0">{item.name}</span></Col>
+                            <Col xs={1} className="d-flex align-items-center justify-content-end p-0"> <BsFillPlayCircleFill className="fs-2" style={{ color: "gray" }} /></Col>
+                        </Row>
+
                     </a>
                 </ListGroup.Item>
             )
@@ -101,7 +100,7 @@ const SearchBar = ({ onQuery }) => {
             <Form.Control
                 type="search"
                 placeholder="Search"
-                className="me-2"
+                className="me-2 fs-3"
                 aria-label="Search"
                 onChange={handleSearch}
             />
@@ -158,8 +157,8 @@ const BioBase = ({ id }) => {
                     <ListGroup.Item style={{ backgroundColor: "transparent", borderBottom: "#84BB25 4px dotted" }}>
                         <a className=" " href={`/SearchWith/Type/${item.id}`} style={{ textDecoration: "none" }}>
                             <Row>
-                                <Col xs={8}> <span className="text-light fs-5 ps-0">{item.name}</span></Col>
-                                <Col className="d-flex align-items-center justify-content-end p-0"><BsFillPlayCircleFill className="text-green-100 fs-2" /></Col>
+                                <Col xs={11}> <span className="text-light fs-3  ps-0">{item.name}</span></Col>
+                                <Col className="d-flex align-items-center justify-content-end p-0"><BsFillPlayCircleFill className="text-green-100 fs-1" /></Col>
                             </Row>
 
 

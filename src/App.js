@@ -1,9 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import { SearchAndFilterPage } from './Pages/Search'
-// import { Names } from './Pages/Name'
-// import { Source } from './Pages/Source';
+
 import { NavBar } from './Components/Navbar'
-// import { AlternativeMaterialsLib } from './Pages/AlternativeMaterialsLib'
+
 import { Footer } from './Components/Footer';
 import { TypeOfMaterial } from './Pages/TypeOfMaterials';
 import { NameOfMaterial } from './Pages/NameOfMaterial';
