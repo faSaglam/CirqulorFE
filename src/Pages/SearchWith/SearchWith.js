@@ -9,7 +9,7 @@ export function SearchWith() {
     const [query2, setQuery2] = useState("")
 
     const [loading, setLoading] = useState(true);
-    console.log("1", loading)
+
     function handleLoading(value) {
         setLoading(value)
     }
@@ -29,10 +29,10 @@ export function SearchWith() {
     }
     else {
         return (
-            <Container style={{ minHeight: "100vh" }} >
+            <Container style={{ minHeight: "100vh" }} className="m-auto" >
                 <Row>
                     <BioBaseList onLoading={handleLoading} />
-                    < Col xs={6}>
+                    < Col xs={4}>
                         <SearchBar onQuery={handleQueries} />
                         <Result onSearch={query2} />
                     </Col>
@@ -125,7 +125,7 @@ const BioBaseList = ({ onLoading }) => {
         <>
             {bioBase.map((item) =>
 
-            (<Col key={item.id} className="mb-2">
+            (<Col key={item.id} className="mb-2" xs={4}>
                 <h3 className="text-center" style={{ color: item.name === "Bio Plastics" ? "#84BB25" : "#FC5E05" }}>{item.name}</h3>
                 <BioBase id={item.id} />
             </Col>
@@ -155,9 +155,9 @@ const BioBase = ({ id }) => {
 
                 <ListGroup variant="flush" key={item.id}>
                     <ListGroup.Item style={{ backgroundColor: "transparent", borderBottom: "#84BB25 4px dotted" }}>
-                        <a className=" " href={`/SearchWith/Type/${item.id}`} style={{ textDecoration: "none" }}>
+                        <a href={`/SearchWith/Type/${item.id}`} style={{ textDecoration: "none" }}>
                             <Row>
-                                <Col xs={11}> <span className="text-light fs-3  ps-0">{item.name}</span></Col>
+                                <Col xs={11}> <span className="text-light fs-2 ps-0 ">{item.name}</span></Col>
                                 <Col className="d-flex align-items-center justify-content-end p-0"><BsFillPlayCircleFill className="text-green-100 fs-1" /></Col>
                             </Row>
 

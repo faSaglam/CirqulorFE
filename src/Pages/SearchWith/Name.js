@@ -14,18 +14,15 @@ export const SearchWithName = () => {
 
     function handleSupplierList(supList) {
         setSupplier(supList)
-
-
     }
     function handleNom(supplier2) {
         setNom(supplier2)
-
     }
     if (nom === "") {
         return (
-            <Container >
+            <Container style={{ minHeight: "62vh" }} fluid>
                 <Row>
-                    <Col xl={6}>
+                    <Col xs={4}>
                         <Name onSupplier={handleSupplierList} onNom={handleNom} />
                     </Col>
                 </Row>
@@ -33,12 +30,12 @@ export const SearchWithName = () => {
         )
     }
     return (
-        <Container >
+        <Container fluid >
             <Row>
-                <Col xl={3}>
+                <Col xs={4}>
                     <Name onSupplier={handleSupplierList} onNom={handleNom} />
                 </Col>
-                <Col>
+                <Col xs={8}>
                     <Material material={nom} />
                 </Col>
             </Row>
@@ -67,11 +64,12 @@ function Name({ onSupplier, onNom }) {
         return (
             <>
                 <h3 className="text-light">{name.name}</h3>
-                <Col>
+
+                <>
                     {name.materialOfSuppliersList.map((item) => (
                         <SupplierList materialOfSuppliersList={item} key={item.id} onNom={onNom} />
                     ))}
-                </Col >
+                </>
 
             </>
         )
@@ -84,21 +82,31 @@ function SupplierList({ materialOfSuppliersList, onNom }) {
 
     const handleMaterial = (e) => {
         let obj = e.target.value
-
-
         onNom(JSON.parse(obj))
     }
 
 
     return (
-        <ListGroup.Item style={{ backgroundColor: "transparent", borderBottom: "#84BB25 2px solid" }} className=" fw-bold fs-5" key={supplier.id}>
+        <ListGroup.Item style={{ backgroundColor: "transparent", borderBottom: "#84BB25 2px solid" }} key={supplier.id}>
 
-            <Button variant="link" className="text-light fs-4 fw-semibold  " style={{ textDecoration: "none" }} onClick={handleMaterial} value={JSON.stringify(supplier)}>
+            <Row>
+                <Col xs={10}>
+                    <Button variant="link" className="text-light fs-2 "
+                        style={{ textDecoration: "none" }}
+                        onClick={handleMaterial}
+                        value={JSON.stringify(supplier)}>
+                        {supplier.producerName}
+                    </Button>
+                </Col>
+                <Col xs={2} className="d-flex align-items-center justify-content-end p-2">
+                    <Button
+                        variant="link" className="text-light fs-1"
+                        style={{ textDecoration: "none" }}
+                        onClick={handleMaterial}
+                        value={JSON.stringify(supplier)}>►</Button></Col>
 
-                {supplier.producerName}
-            </Button>
-            <BsFillPlayCircleFill style={{ color: "gray", fontSize: "32px", minWidth: "32px" }} />
-        </ListGroup.Item>
+            </Row>
+        </ListGroup.Item >
     )
 }
 export const Material = ({ material }) => {
