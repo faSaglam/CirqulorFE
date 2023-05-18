@@ -13,6 +13,7 @@ import { SearchWithType } from './Pages/SearchWith/Type';
 import { SearchWithName } from './Pages/SearchWith/Name';
 import { MainPage } from './Pages/MainPage';
 import { AlternativeMaterial } from './Components/AlternativeMaterial';
+import { CreateMaterial } from './Pages/CreateMaterial';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path='/SearchWith' element={<SearchWith />} />
           <Route path='/SearchWith/Type/:id' element={<SearchWithType />} />
           <Route path='/SearchWith/Name/:id' element={<SearchWithName />} />
+          <Route path='/CreateMaterial' element={<CreateMaterial />} />
         </Routes>
       </Router>
 
