@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react"
 
-import { Container, ListGroup, Row, Col, Button } from "react-bootstrap";
+import { Container, ListGroup, Row, Col, Button, Image } from "react-bootstrap";
 
 
 import { getNameById } from "../../Services/nameOfMaterialService"
-import { BsFillPlayCircleFill } from 'react-icons/bs'
+
 
 export const SearchWithName = () => {
 
@@ -115,20 +115,21 @@ export const Material = ({ material }) => {
     useEffect(() => {
         setProperties(material.properties)
 
+
     }, [material])
 
-    if (material === null && properties === null) {
-        return (
-            <p>Loading</p>
-        )
-    }
+    // if (material === null && properties === null) {
+    //     return (
+    //         <p>Loading</p>
+    //     )
+    // }
 
 
     return (
         <Container>
             <Row>
                 <Col xl={4} className="mt-4">
-                    <img src={material.photoUrl} alt="material" />
+                    <Image src={material.photoUrl} alt="material" fluid />
                     <h3 className="text-green-100">Notes </h3>
                     <hr style={{ borderBottom: "#84BB25  5px solid" }} />
 
@@ -136,19 +137,19 @@ export const Material = ({ material }) => {
                 </Col>
                 <Col xl={8}>
                     <h3 className="text-light">{material.producerName}  </h3>
-                    <PhysicalProp x={properties.PhysicalProperties} />
+                    <PhysicalProp x={properties.physicalProperties} />
                     <br />
-                    <ThermalProp x={properties.ThermalProperties} />
+                    <ThermalProp x={properties.thermalProperties} />
                     <br />
-                    <DescriptiveProperties x={properties.DescriptiveProperties} />
+                    <DescriptiveProperties x={properties.descriptiveProperties} />
                     <br />
-                    <MechanicalProperties x={properties.MechanicalProperties} />
+                    <MechanicalProperties x={properties.mechanicalProperties} />
                     <br />
-                    <OpticalProperties x={properties.OpticalProperties} />
+                    <OpticalProperties x={properties.opticalProperties} />
                     <br />
-                    <ElectricalProperties x={properties.ElectricalProperties} />
+                    <ElectricalProperties x={properties.electricalProperties} />
                     <br />
-                    <ProcessingProperties x={properties.ProcessingProperties} />
+                    <ProcessingProperties x={properties.processingProperties} />
 
                 </Col>
 
@@ -167,6 +168,8 @@ function PhysicalProp({ x }) {
 
     let keys = Object.entries(x)
 
+
+
     return (
         <>
             <h4 className="text-green-100">Physical Properties</h4>
@@ -176,7 +179,8 @@ function PhysicalProp({ x }) {
 
                     <Container key={key}>
                         <Row>
-                            <Col><p className="text-green-100 fw-semibold fs-6">{key}</p></Col>
+                            <Col><p className="text-green-100 fw-semibold fs-6">{key.replace(/([A-Z])/g, ' $1')
+                                .replace(/^./, function (s) { return s.toUpperCase(); })}</p></Col>
                             <Col><p className="text-light fw-semibold fs-6">{val}</p></Col>
                         </Row>
                     </Container>
@@ -201,7 +205,12 @@ function ThermalProp({ x }) {
 
                     <Container key={key}>
                         <Row>
-                            <Col><p className="text-green-100 fw-semibold fs-6">{key}</p></Col>
+                            <Col>
+                                <p className="text-green-100 fw-semibold fs-6">
+                                    {key.replace(/([A-Z])/g, ' $1')
+                                        .replace(/^./, function (s) { return s.toUpperCase(); })}
+                                </p>
+                            </Col>
                             <Col><p className="text-light fw-semibold fs-6">{val}</p></Col>
                         </Row>
                     </Container>
@@ -226,7 +235,12 @@ function DescriptiveProperties({ x }) {
 
                     <Container key={key}>
                         <Row>
-                            <Col><p className="text-green-100 fw-semibold fs-6">{key}</p></Col>
+                            <Col>
+                                <p className="text-green-100 fw-semibold fs-6">
+                                    {key.replace(/([A-Z])/g, ' $1')
+                                        .replace(/^./, function (s) { return s.toUpperCase(); })}
+                                </p>
+                            </Col>
                             <Col><p className="text-light fw-semibold fs-6">{val}</p></Col>
                         </Row>
                     </Container>
@@ -250,7 +264,12 @@ function MechanicalProperties({ x }) {
 
                     <Container key={key}>
                         <Row>
-                            <Col><p className="text-green-100 fw-semibold fs-6">{key}</p></Col>
+                            <Col>
+                                <p className="text-green-100 fw-semibold fs-6">
+                                    {key.replace(/([A-Z])/g, ' $1')
+                                        .replace(/^./, function (s) { return s.toUpperCase(); })}
+                                </p>
+                            </Col>
                             <Col><p className="text-light fw-semibold fs-6">{val}</p></Col>
                         </Row>
                     </Container>
@@ -275,7 +294,12 @@ function OpticalProperties({ x }) {
 
                     <Container key={key}>
                         <Row>
-                            <Col><p className="text-green-100 fw-semibold fs-6">{key}</p></Col>
+                            <Col>
+                                <p className="text-green-100 fw-semibold fs-6">
+                                    {key.replace(/([A-Z])/g, ' $1')
+                                        .replace(/^./, function (s) { return s.toUpperCase(); })}
+                                </p>
+                            </Col>
                             <Col><p className="text-light fw-semibold fs-6">{val}</p></Col>
                         </Row>
                     </Container>
@@ -300,7 +324,12 @@ function ProcessingProperties({ x }) {
 
                     <Container key={key}>
                         <Row>
-                            <Col><p className="text-green-100 fw-semibold fs-6">{key}</p></Col>
+                            <Col>
+                                <p className="text-green-100 fw-semibold fs-6">
+                                    {key.replace(/([A-Z])/g, ' $1')
+                                        .replace(/^./, function (s) { return s.toUpperCase(); })}
+                                </p>
+                            </Col>
                             <Col><p className="text-light fw-semibold fs-6">{val}</p></Col>
                         </Row>
                     </Container>
@@ -325,7 +354,12 @@ function ElectricalProperties({ x }) {
 
                     <Container key={key}>
                         <Row>
-                            <Col><p className="text-green-100 fw-semibold fs-6">{key}</p></Col>
+                            <Col>
+                                <p className="text-green-100 fw-semibold fs-6">
+                                    {key.replace(/([A-Z])/g, ' $1')
+                                        .replace(/^./, function (s) { return s.toUpperCase(); })}
+                                </p>
+                            </Col>
                             <Col><p className="text-light fw-semibold fs-6">{val}</p></Col>
                         </Row>
                     </Container>
