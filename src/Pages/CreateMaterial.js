@@ -94,6 +94,27 @@ export const CreateMaterial = () => {
     const [transmissionVisible, setTransmissionVisible] = useState()
     //#endregion
 
+    //#region Processing Properties
+    const [ProcessingTemperature, setProcessingTemperature] = useState()
+    const [NozzleTemperature, setNozzleTemperature] = useState()
+    const [AdapterTemperature, setAdapterTemperature] = useState()
+    const [DieTemperature, setDieTemperature] = useState()
+    const [MeltTemperature, setMeltTemperature] = useState()
+    const [MoldTemperature, setMoldTemperature] = useState()
+    const [DryingTemperature, setDryingTemperature] = useState()
+    const [MoistureContent, setMoistureContent] = useState()
+    const [DewPoint, setDewPoint] = useState()
+    const [DryingAirFlowRate, setDryingAirFlowRate] = useState()
+    const [InjectionPressure, setInjectionPressure] = useState()
+    //#endregion
+
+    //#region Electrical Properties
+    const [ElectricalResistivity, setElectricalResistivity] = useState()
+    const [SurfaceResistance, setSurfaceResistance] = useState()
+    const [DielectricConstant, setDielectricConstant] = useState()
+    const [DissipationFactor, setDissipationFactor] = useState()
+    //#endregion
+
     useEffect(() => {
         getAllNamesNonQuery().then(res => {
             setListNOM(res)
@@ -188,7 +209,28 @@ export const CreateMaterial = () => {
                     Haze: haze,
                     Gloss: gloss,
                     TransmissionVisible: transmissionVisible
+                },
+                ProcessingProperties: {
+                    ProcessingTemperature: ProcessingTemperature,
+                    NozzleTemperature: NozzleTemperature,
+                    AdapterTemperature: AdapterTemperature,
+                    DieTemperature: DieTemperature,
+                    MeltTemperature: MeltTemperature,
+                    MoldTemperature: MoldTemperature,
+                    DryingTemperature: DryingTemperature,
+                    MoistureContent: MoistureContent,
+                    DewPoint: DewPoint,
+                    DryingAirFlowRate: DryingAirFlowRate,
+                    InjectionPressure: InjectionPressure
+                },
+                ElectricalProperties: {
+                    ElectricalResistivity: ElectricalResistivity,
+                    SurfaceResistance: SurfaceResistance,
+                    DielectricConstant: DielectricConstant,
+                    DissipationFactor: DissipationFactor
+
                 }
+
 
             }
         }
@@ -439,6 +481,59 @@ export const CreateMaterial = () => {
     }
     //#endregion
 
+    //#region proccessing handlers
+    const handleProcessingTemperature = (e) => {
+        setProcessingTemperature(e.target.value)
+    }
+    const handleNozzleTemperature = (e) => {
+        setNozzleTemperature(e.target.value)
+    }
+    const handleDryingTemperature = (e) => {
+        setDryingTemperature(e.target.value)
+    }
+
+    const handleAdapterTemperature = (e) => {
+        setAdapterTemperature(e.target.value)
+    }
+    const handleDieTemperature = (e) => {
+        setDieTemperature(e.target.value)
+    }
+    const handleMoistureContent = (e) => {
+        setMoistureContent(e.target.value)
+    }
+    const handleDewPoint = (e) => {
+        setDewPoint(e.target.value)
+    }
+    const handleDryingAirFlowRate = (e) => {
+        setDryingAirFlowRate(e.target.value)
+    }
+    const handleInjectionPressure = (e) => {
+        setInjectionPressure(e.target.value)
+    }
+    const handleMeltTemperature = (e) => {
+        setMeltTemperature(e.target.value)
+    }
+    const handleMoldTemperature = (e) => {
+        setMoldTemperature(e.target.value)
+    }
+
+
+    //#endregion
+
+    //#region  electrical handlers
+    const handleElectricalResistivity = (e) => {
+        setElectricalResistivity(e.target.value)
+    }
+    const handleSurfaceResistance = (e) => {
+        setSurfaceResistance(e.target.value)
+    }
+    const handleDielectricConstant = (e) => {
+        setDielectricConstant(e.target.value)
+    }
+    const handleDissipationFactor = (e) => {
+        setDissipationFactor(e.target.value)
+    }
+    //#endregion
     return (
         <Container>
 
@@ -593,7 +688,7 @@ export const CreateMaterial = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col>
+                    <Col className='border border-green-100'>
                         <h4 className="text-green-100">Mechanical Properties</h4>
                         <Form.Group className="mb-3" controlId="HardnessRockwellR">
                             <Form.Label className='text-green-100 fs-4'>Hardness RockwellR</Form.Label>
@@ -750,7 +845,7 @@ export const CreateMaterial = () => {
 
 
                     </Col>
-                    <Col>
+                    <Col className='border border-green-100'>
                         <h4 className="text-green-100">Optical Properties</h4>
                         <Form.Group className="mb-3" controlId="Haze">
                             <Form.Label className='text-green-100 fs-4'>Haze</Form.Label>
@@ -764,6 +859,76 @@ export const CreateMaterial = () => {
                             <Form.Label className='text-green-100 fs-4'>Transmission Visible</Form.Label>
                             <Form.Control type="text" className='fs-4' placeholder="Transmission Visible" value={transmissionVisible} onChange={handleTransmissionVisible} />
                         </Form.Group>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className='border border-green-100'>
+                        <h4 className="text-green-100">Processing Properties</h4>
+                        <Form.Group className="mb-3" controlId="ProcessingTemperature">
+                            <Form.Label className='text-green-100 fs-4'>ProcessingTemperature</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="ProcessingTemperature" value={ProcessingTemperature} onChange={handleProcessingTemperature} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="NozzleTemperature">
+                            <Form.Label className='text-green-100 fs-4'>NozzleTemperature</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="NozzleTemperature" value={NozzleTemperature} onChange={handleNozzleTemperature} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="AdapterTemperature">
+                            <Form.Label className='text-green-100 fs-4'>AdapterTemperature</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="AdapterTemperature" value={AdapterTemperature} onChange={handleAdapterTemperature} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="DieTemperature">
+                            <Form.Label className='text-green-100 fs-4'>DieTemperature</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="DieTemperature" value={DieTemperature} onChange={handleDieTemperature} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="MeltTemperature">
+                            <Form.Label className='text-green-100 fs-4'>MeltTemperature</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="MeltTemperature" value={MeltTemperature} onChange={handleMeltTemperature} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="MoldTemperature">
+                            <Form.Label className='text-green-100 fs-4'>MoldTemperature</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="MoldTemperature" value={MoldTemperature} onChange={handleMoldTemperature} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="DryingTemperature">
+                            <Form.Label className='text-green-100 fs-4'>DryingTemperature</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="DryingTemperature" value={DryingTemperature} onChange={handleDryingTemperature} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="MoistureContent">
+                            <Form.Label className='text-green-100 fs-4'>MoistureContent</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="MoistureContent" value={MoistureContent} onChange={handleMoistureContent} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="DewPoint">
+                            <Form.Label className='text-green-100 fs-4'>DewPoint</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="DewPoint" value={DewPoint} onChange={handleDewPoint} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="DryingAirFlowRate">
+                            <Form.Label className='text-green-100 fs-4'>DryingAirFlowRate</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="DryingAirFlowRate" value={DryingAirFlowRate} onChange={handleDryingAirFlowRate} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="InjectionPressure">
+                            <Form.Label className='text-green-100 fs-4'>InjectionPressure</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="InjectionPressure" value={InjectionPressure} onChange={handleInjectionPressure} />
+                        </Form.Group>
+                    </Col>
+                    <Col className='border border-green-100'>
+                        <h4 className="text-green-100">Electrical Properties</h4>
+                        <Form.Group className="mb-3" controlId="ElectricalResistivity">
+                            <Form.Label className='text-green-100 fs-4'>ElectricalResistivity</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="ElectricalResistivity" value={ElectricalResistivity} onChange={handleElectricalResistivity} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="SurfaceResistance">
+                            <Form.Label className='text-green-100 fs-4'>SurfaceResistance</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="SurfaceResistance" value={SurfaceResistance} onChange={handleSurfaceResistance} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="DielectricConstant">
+                            <Form.Label className='text-green-100 fs-4'>DielectricConstant</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="DielectricConstant" value={DielectricConstant} onChange={handleDielectricConstant} />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="DissipationFactor">
+                            <Form.Label className='text-green-100 fs-4'>DissipationFactor</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="DissipationFactor" value={DissipationFactor} onChange={handleDissipationFactor} />
+                        </Form.Group>
+
                     </Col>
                 </Row>
                 <div className="d-grid">
