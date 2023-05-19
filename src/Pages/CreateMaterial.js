@@ -50,7 +50,6 @@ export const CreateMaterial = () => {
     const [FlammabilityUL94, setFlammabilityUL94] = useState();
     //#endregion
 
-
     //#region Mechanical Properties
     const [HardnessRockwellR, setHardnessRockwellR] = useState();
     const [BallIndentationHardness, setBallIndentationHardness] = useState();
@@ -89,6 +88,11 @@ export const CreateMaterial = () => {
     const [IzodImpactUnnotched, setIzodImpactUnnotched] = useState();
     //#endregion
 
+    // #region optical Properties
+    const [haze, setHaze] = useState()
+    const [gloss, setGloss] = useState()
+    const [transmissionVisible, setTransmissionVisible] = useState()
+    //#endregion
 
     useEffect(() => {
         getAllNamesNonQuery().then(res => {
@@ -171,7 +175,6 @@ export const CreateMaterial = () => {
                     ElmendorfTearStrengthTD: ElmendorfTearStrengthTD,
                     DartDropTotalEnergy: DartDropTotalEnergy,
                     DartDropTest: DartDropTest,
-
                     HardnessShoreA: HardnessShoreA,
                     HardnessShoreD: HardnessShoreD,
                     FilmElongationAtBreakTD: FilmElongationAtBreakTD,
@@ -180,6 +183,11 @@ export const CreateMaterial = () => {
 
 
 
+                },
+                OpticalProperties: {
+                    Haze: haze,
+                    Gloss: gloss,
+                    TransmissionVisible: transmissionVisible
                 }
 
             }
@@ -311,7 +319,7 @@ export const CreateMaterial = () => {
     }
     //#endregion
 
-    //#region  mechanical properties
+    //#region  mechanical handlers
     const handleHardnessRockwellR = (e) => {
         setHardnessRockwellR(e.target.value)
     }
@@ -419,6 +427,17 @@ export const CreateMaterial = () => {
     }
     //#endregion
 
+    //#region optical handlers
+    const handleHaze = (e) => {
+        setHaze(e.target.value)
+    }
+    const handleGloss = (e) => {
+        setGloss(e.target.value)
+    }
+    const handleTransmissionVisible = (e) => {
+        setTransmissionVisible(e.target.value)
+    }
+    //#endregion
 
     return (
         <Container>
@@ -575,6 +594,7 @@ export const CreateMaterial = () => {
                 </Row>
                 <Row>
                     <Col>
+                        <h4 className="text-green-100">Mechanical Properties</h4>
                         <Form.Group className="mb-3" controlId="HardnessRockwellR">
                             <Form.Label className='text-green-100 fs-4'>Hardness RockwellR</Form.Label>
                             <Form.Control type="text" className='fs-4' placeholder="Hardness RockwellR" value={HardnessRockwellR} onChange={handleHardnessRockwellR} />
@@ -729,6 +749,21 @@ export const CreateMaterial = () => {
                         </Form.Group>
 
 
+                    </Col>
+                    <Col>
+                        <h4 className="text-green-100">Optical Properties</h4>
+                        <Form.Group className="mb-3" controlId="Haze">
+                            <Form.Label className='text-green-100 fs-4'>Haze</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Haze" value={haze} onChange={handleHaze} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="Gloss">
+                            <Form.Label className='text-green-100 fs-4'>Gloss</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Haze" value={gloss} onChange={handleGloss} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="TransmissionVisible">
+                            <Form.Label className='text-green-100 fs-4'>Transmission Visible</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Transmission Visible" value={transmissionVisible} onChange={handleTransmissionVisible} />
+                        </Form.Group>
                     </Col>
                 </Row>
                 <div className="d-grid">
