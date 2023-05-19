@@ -417,6 +417,7 @@ export const CreateMaterial = () => {
     const handleIzodImpactUnnotched = (e) => {
         setIzodImpactUnnotched(e.target.value)
     }
+    //#endregion
 
 
     return (
@@ -583,24 +584,24 @@ export const CreateMaterial = () => {
                             <Form.Control type="text" className='fs-4' placeholder="Ball Indentation Hardness" value={BallIndentationHardness} onChange={handleBallIndentationHardness} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="TensileStrengthUltimate">
-                            <Form.Label className='text-green-100 fs-4'>Hardness RockwellR</Form.Label>
+                            <Form.Label className='text-green-100 fs-4'>Tensile Strength Ultimate</Form.Label>
                             <Form.Control type="text" className='fs-4' placeholder="Tensile Strength Ultimate" value={TensileStrengthUltimate} onChange={handleTensileStrengthUltimate} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="FilmTensileStrengthAtYieldMD">
                             <Form.Label className='text-green-100 fs-4'>Film Tensile Strength At Yield MD</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="FilmTensileStrengthAtYieldMD" value={FilmTensileStrengthAtYieldMD} onChange={handleFilmTensileStrengthAtYieldMD} />
+                            <Form.Control type="text" className='fs-4' placeholder="Film Tensile Strength At Yield MD" value={FilmTensileStrengthAtYieldMD} onChange={handleFilmTensileStrengthAtYieldMD} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="FilmTensileStrengthAtYieldTD">
-                            <Form.Label className='text-green-100 fs-4'>FilmTensileStrengthAtYieldTD</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="FilmTensileStrengthAtYieldTD" value={FilmTensileStrengthAtYieldTD} onChange={handleFilmTensileStrengthAtYieldTD} />
+                            <Form.Label className='text-green-100 fs-4'>Film Tensile Strength At Yield TD</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Film Tensile Strength At Yield TD" value={FilmTensileStrengthAtYieldTD} onChange={handleFilmTensileStrengthAtYieldTD} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="TensileStrengthYield">
-                            <Form.Label className='text-green-100 fs-4'>TensileStrengthYield</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="TensileStrengthYield" value={TensileStrengthYield} onChange={handleTensileStrengthYield} />
+                            <Form.Label className='text-green-100 fs-4'>Tensile Strength Yield</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Tensile Strength Yield" value={TensileStrengthYield} onChange={handleTensileStrengthYield} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="FilmElongationAtBreakMD">
-                            <Form.Label className='text-green-100 fs-4'>FilmElongationAtBreakMD</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="FilmElongationAtBreakMD" value={FilmElongationAtBreakMD} onChange={handleFilmElongationAtBreakMD} />
+                            <Form.Label className='text-green-100 fs-4'>Film Elongation At Break MD</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Film Elongation At Break MD" value={FilmElongationAtBreakMD} onChange={handleFilmElongationAtBreakMD} />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="ElongationAtBreak">
@@ -612,126 +613,121 @@ export const CreateMaterial = () => {
                             <Form.Control type="text" className='fs-4' placeholder="Elongation At Yield" value={ElongationAtYield} onChange={handleElongationAtYield} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="ModulusOfElasticity">
-                            <Form.Label className='text-green-100 fs-4'>ModulusOfElasticity</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="ModulusOfElasticity" value={ModulusOfElasticity} onChange={handleModulusOfElasticity} />
+                            <Form.Label className='text-green-100 fs-4'>Modulus Of Elasticity</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Modulus Of Elasticity" value={ModulusOfElasticity} onChange={handleModulusOfElasticity} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="Tenacity">
                             <Form.Label className='text-green-100 fs-4'>Tenacity</Form.Label>
                             <Form.Control type="text" className='fs-4' placeholder="Tenacity" value={Tenacity} onChange={handleTenacity} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="FlexuralYieldStrength">
-                            <Form.Label className='text-green-100 fs-4'>FlexuralYieldStrength</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="FlexuralYieldStrength" value={FlexuralYieldStrength} onChange={handleFlexuralYieldStrength} />
+                            <Form.Label className='text-green-100 fs-4'>
+                                Flexural Yield Strength
+                            </Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Flexural Yield Strength" value={FlexuralYieldStrength} onChange={handleFlexuralYieldStrength} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="FlexuralModulus">
-                            <Form.Label className='text-green-100 fs-4'>FlexuralModulus</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="FlexuralModulus" value={FlexuralModulus} onChange={handleFlexuralModulus} />
+                            <Form.Label className='text-green-100 fs-4'>Flexural Modulus</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Flexural Modulus" value={FlexuralModulus} onChange={handleFlexuralModulus} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="FlexuralStrainAtBreak">
-                            <Form.Label className='text-green-100 fs-4'>FlexuralStrainAtBreak</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="FlexuralStrainAtBreak" value={FlexuralStrainAtBreak} onChange={handleFlexuralStrainAtBreak} />
+                            <Form.Label className='text-green-100 fs-4'>Flexural Strain At Break</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Flexural Strain At Break" value={FlexuralStrainAtBreak} onChange={handleFlexuralStrainAtBreak} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="SecantModulus">
-                            <Form.Label className='text-green-100 fs-4'>SecantModulus</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="SecantModulus" value={SecantModulus} onChange={handleSecantModulus} />
+                            <Form.Label className='text-green-100 fs-4'>Secant Modulus</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Secant Modulus" value={SecantModulus} onChange={handleSecantModulus} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="SecantModulusMD">
-                            <Form.Label className='text-green-100 fs-4'>SecantModulusMD</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="SecantModulusMD" value={SecantModulusMD} onChange={handleSecantModulusMD} />
+                            <Form.Label className='text-green-100 fs-4'>Secant Modulus MD</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Secant Modulus MD" value={SecantModulusMD} onChange={handleSecantModulusMD} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="SecantModulusTD">
-                            <Form.Label className='text-green-100 fs-4'>SecantModulusTD</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="SecantModulusTD" value={SecantModulusTD} onChange={handleSecantModulusTD} />
+                            <Form.Label className='text-green-100 fs-4'>Secant Modulus TD</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Secant Modulus TD" value={SecantModulusTD} onChange={handleSecantModulusTD} />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="IzodImpactNotchedISO">
-                            <Form.Label className='text-green-100 fs-4'>IzodImpactNotchedISO</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="IzodImpactNotchedISO" value={IzodImpactNotchedISO} onChange={handleIzodImpactNotchedISO} />
+                            <Form.Label className='text-green-100 fs-4'>Izod Impact Notched ISO</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Izod Impact Notched ISO" value={IzodImpactNotchedISO} onChange={handleIzodImpactNotchedISO} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="IzodImpactUnnotchedISO">
-                            <Form.Label className='text-green-100 fs-4'>IzodImpactUnnotchedISO</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="IzodImpactUnnotchedISO" value={IzodImpactUnnotchedISO} onChange={handleIzodImpactUnnotchedISO} />
+                            <Form.Label className='text-green-100 fs-4'>Izod Impact Unnotched ISO</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Izod Impact Unnotched ISO" value={IzodImpactUnnotchedISO} onChange={handleIzodImpactUnnotchedISO} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="CharpyImpactNotched ">
-                            <Form.Label className='text-green-100 fs-4'>CharpyImpactNotched</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="CharpyImpactNotched" value={CharpyImpactNotched} onChange={handleCharpyImpactNotched} />
+                            <Form.Label className='text-green-100 fs-4'>Charpy Impact Notched</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Charpy Impact Notched" value={CharpyImpactNotched} onChange={handleCharpyImpactNotched} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="CharpyImpactUnnotched">
-                            <Form.Label className='text-green-100 fs-4'>CharpyImpactUnnotched</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="CharpyImpactUnnotched" value={CharpyImpactUnnotched} onChange={handleCharpyImpactUnnotched} />
+                            <Form.Label className='text-green-100 fs-4'>Charpy Impact Unnotched</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Charpy Impact Unnotched" value={CharpyImpactUnnotched} onChange={handleCharpyImpactUnnotched} />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="CoefficientOfFriction">
-                            <Form.Label className='text-green-100 fs-4'>CoefficientOfFriction</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="CoefficientOfFriction" value={CoefficientOfFriction} onChange={handleCoefficientOfFriction} />
+                            <Form.Label className='text-green-100 fs-4'>Coefficient Of Friction</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Coefficient Of Friction" value={CoefficientOfFriction} onChange={handleCoefficientOfFriction} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="CoefficientOfFrictionStatic">
-                            <Form.Label className='text-green-100 fs-4'>CoefficientOfFrictionStatic</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="CoefficientOfFrictionStatic" value={CoefficientOfFrictionStatic} onChange={handleCoefficientOfFrictionStatic} />
+                            <Form.Label className='text-green-100 fs-4'>Coefficient Of Friction Static</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Coefficient Of Friction Static" value={CoefficientOfFrictionStatic} onChange={handleCoefficientOfFrictionStatic} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="TearStrength">
-                            <Form.Label className='text-green-100 fs-4'>TearStrength</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="TearStrength" value={TearStrength} onChange={handleTearStrength} />
+                            <Form.Label className='text-green-100 fs-4'>Tear Strength</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Tear Strength" value={TearStrength} onChange={handleTearStrength} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="ElmendorfTearStrengthMD">
-                            <Form.Label className='text-green-100 fs-4'>ElmendorfTearStrengthMD</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="ElmendorfTearStrengthMD" value={ElmendorfTearStrengthMD} onChange={handleElmendorfTearStrengthMD} />
+                            <Form.Label className='text-green-100 fs-4'>Elmendorf Tear Strength MD</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Elmendorf Tear Strength MD" value={ElmendorfTearStrengthMD} onChange={handleElmendorfTearStrengthMD} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="ElmendorfTearStrengthTD">
-                            <Form.Label className='text-green-100 fs-4'>ElmendorfTearStrengthTD</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="ElmendorfTearStrengthTD" value={ElmendorfTearStrengthTD} onChange={handleElmendorfTearStrengthTD} />
+                            <Form.Label className='text-green-100 fs-4'>Elmendorf Tear Strength TD</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Elmendorf Tear Strength TD" value={ElmendorfTearStrengthTD} onChange={handleElmendorfTearStrengthTD} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="DartDropTotalEnergy">
-                            <Form.Label className='text-green-100 fs-4'>DartDropTotalEnergy</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="DartDropTotalEnergy" value={DartDropTotalEnergy} onChange={handleDartDropTotalEnergy} />
+                            <Form.Label className='text-green-100 fs-4'>Dart Drop Total Energy</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Dart Drop Total Energy" value={DartDropTotalEnergy} onChange={handleDartDropTotalEnergy} />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="DartDropTest">
-                            <Form.Label className='text-green-100 fs-4'>DartDropTest</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="DartDropTest" value={DartDropTest} onChange={handleDartDropTest} />
+                            <Form.Label className='text-green-100 fs-4'>Dart Drop Test</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Dart Drop Test" value={DartDropTest} onChange={handleDartDropTest} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="FilmTensileStrengthAtBreakMD">
-                            <Form.Label className='text-green-100 fs-4'>FilmTensileStrengthAtBreakMD</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="FilmTensileStrengthAtBreakMD" value={FilmTensileStrengthAtBreakMD} onChange={handleFilmTensileStrengthAtBreakMD} />
+                            <Form.Label className='text-green-100 fs-4'>FilmTensile Strength At Break MD</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="FilmTensile Strength At Break MD" value={FilmTensileStrengthAtBreakMD} onChange={handleFilmTensileStrengthAtBreakMD} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="FilmTensileStrengthAtBreakTD">
-                            <Form.Label className='text-green-100 fs-4'>FilmTensileStrengthAtBreakTD</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="FilmTensileStrengthAtBreakTD" value={FilmTensileStrengthAtBreakTD} onChange={handleFilmTensileStrengthAtBreakTD} />
+                            <Form.Label className='text-green-100 fs-4'>Film Tensile Strength At Break TD</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Film Tensile Strength At Break TD" value={FilmTensileStrengthAtBreakTD} onChange={handleFilmTensileStrengthAtBreakTD} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="HardnessShoreA">
-                            <Form.Label className='text-green-100 fs-4'>HardnessShoreA</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="HardnessShoreA" value={HardnessShoreA} onChange={handleHardnessShoreA} />
+                            <Form.Label className='text-green-100 fs-4'>Hardness Shore A</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Hardness Shore A" value={HardnessShoreA} onChange={handleHardnessShoreA} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="HardnessShoreD">
-                            <Form.Label className='text-green-100 fs-4'>HardnessShoreD</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="HardnessShoreD" value={HardnessShoreD} onChange={handleHardnessShoreD} />
+                            <Form.Label className='text-green-100 fs-4'>Hardness Shore D</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Hardness Shore D" value={HardnessShoreD} onChange={handleHardnessShoreD} />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="FilmElongationAtBreakTD">
-                            <Form.Label className='text-green-100 fs-4'>FilmElongationAtBreakTD</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="FilmElongationAtBreakTD" value={FilmElongationAtBreakTD} onChange={handleFilmElongationAtBreakTD} />
+                            <Form.Label className='text-green-100 fs-4'>Film Elongation At Break TD</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Film Elongation At Break TD" value={FilmElongationAtBreakTD} onChange={handleFilmElongationAtBreakTD} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="IzodImpactNotched">
-                            <Form.Label className='text-green-100 fs-4'>IzodImpactNotched</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="IzodImpactNotched" value={IzodImpactNotched} onChange={handleIzodImpactNotched} />
+                            <Form.Label className='text-green-100 fs-4'>Izod Impact Notched</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Izod Impact Notched" value={IzodImpactNotched} onChange={handleIzodImpactNotched} />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="IzodImpactUnnotched">
-                            <Form.Label className='text-green-100 fs-4'>IzodImpactUnnotched</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="IzodImpactUnnotched" value={IzodImpactUnnotched} onChange={handleIzodImpactUnnotched} />
+                            <Form.Label className='text-green-100 fs-4'>Izod Impact Unnotched</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Izod Impact Unnotched" value={IzodImpactUnnotched} onChange={handleIzodImpactUnnotched} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="IzodImpactUnnotched">
-                            <Form.Label className='text-green-100 fs-4'>IzodImpactUnnotched</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="IzodImpactUnnotched" value={IzodImpactUnnotched} onChange={handleIzodImpactUnnotched} />
+                            <Form.Label className='text-green-100 fs-4'>Izod Impact Unnotched</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Izod Impact Unnotched" value={IzodImpactUnnotched} onChange={handleIzodImpactUnnotched} />
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="IzodImpactUnnotched">
-                            <Form.Label className='text-green-100 fs-4'>IzodImpactUnnotched</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="IzodImpactUnnotched" value={IzodImpactUnnotched} onChange={handleIzodImpactUnnotched} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="IzodImpactUnnotched">
-                            <Form.Label className='text-green-100 fs-4'>IzodImpactUnnotched</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="IzodImpactUnnotched" value={IzodImpactUnnotched} onChange={handleIzodImpactUnnotched} />
-                        </Form.Group>
+
 
                     </Col>
                 </Row>
