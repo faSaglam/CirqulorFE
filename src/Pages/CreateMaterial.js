@@ -539,8 +539,9 @@ export const CreateMaterial = () => {
 
             <Form onSubmit={addMaterial}>
                 <Row>
-                    <Col className='border border-success'>
-                        <h4 className="text-green-100">Description Properties</h4>
+                    {/* Description */}
+                    <Col className='border border-success ' xs={6}>
+                        <h2 className="text-green-100">Description Properties</h2>
                         <Form.Group className="mb-3 " controlId="photoUrl">
                             <Form.Label className='text-green-100 fs-4'>Photo Url</Form.Label>
                             <Form.Control type="text" placeholder="Photo Url" className='fs-4' value={newPhotoUrl} onChange={handlePhotoUrl} />
@@ -560,8 +561,157 @@ export const CreateMaterial = () => {
                             })}
                         </Form.Select>
                     </Col>
-                    <Col className='border border-success'>
-                        <h4 className="text-green-100">Physical Properties</h4>
+                    {/* Optical */}
+                    <Col className='border border-success' xs={6}>
+                        <h2 className="text-green-100">Optical Properties</h2>
+                        <Form.Group className="mb-3" controlId="Haze">
+                            <Form.Label className='text-green-100 fs-4'>Haze</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Haze" value={haze} onChange={handleHaze} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="Gloss">
+                            <Form.Label className='text-green-100 fs-4'>Gloss</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Haze" value={gloss} onChange={handleGloss} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="TransmissionVisible">
+                            <Form.Label className='text-green-100 fs-4'>Transmission Visible</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Transmission Visible" value={transmissionVisible} onChange={handleTransmissionVisible} />
+                        </Form.Group>
+                    </Col>
+                    {/* Descriptive */}
+                    <Col className='border border-success' xs={6}>
+                        <h2 className="text-green-100">Descriptive Properties</h2>
+                        <Form.Group className="mb-3" controlId="Flame Support Resistance">
+                            <Form.Label className='text-green-100 fs-4'>Flame Support Ressistanve</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Flame Support Resistance" value={newFSR} onChange={handleFSR} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="Resistance To Hydrocarbons">
+                            <Form.Label className='text-green-100 fs-4'>Resistance To Hydrocarbons</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Resistance To Hydrocarbons" value={newRTH} onChange={handleRTH} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="Resistance To Oil">
+                            <Form.Label className='text-green-100 fs-4'>Resistance To Oil</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Resistance To Hydrocarbons" value={newRTO} onChange={handleRTO} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="Standart Width">
+                            <Form.Label className='text-green-100 fs-4'>Standart Width</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Standart Width" value={newSW} onChange={handleSW} />
+                        </Form.Group>
+                    </Col>
+                    {/* electrical */}
+                    <Col Col className='border border-success' xs={6}>
+                        <h2 className="text-green-100">Electrical Properties</h2>
+                        <Form.Group className="mb-3" controlId="ElectricalResistivity">
+                            <Form.Label className='text-green-100 fs-4'>ElectricalResistivity</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="ElectricalResistivity" value={ElectricalResistivity} onChange={handleElectricalResistivity} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="SurfaceResistance">
+                            <Form.Label className='text-green-100 fs-4'>SurfaceResistance</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="SurfaceResistance" value={SurfaceResistance} onChange={handleSurfaceResistance} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="DielectricConstant">
+                            <Form.Label className='text-green-100 fs-4'>DielectricConstant</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="DielectricConstant" value={DielectricConstant} onChange={handleDielectricConstant} />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="DissipationFactor">
+                            <Form.Label className='text-green-100 fs-4'>DissipationFactor</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="DissipationFactor" value={DissipationFactor} onChange={handleDissipationFactor} />
+                        </Form.Group>
+
+                    </Col>
+                    {/* Thermal */}
+                    <Col className='border border-success' xs={6}>
+                        <h2 className="text-green-100">Thermal Properties</h2>
+                        <Form.Group className="mb-3" controlId="CTE Linear">
+                            <Form.Label className='text-green-100 fs-4'>CTE Linear</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="CTE Linear" value={CTELinear} onChange={handleCTELinear} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="Thermal Conductivity">
+                            <Form.Label className='text-green-100 fs-4'>Thermal Conductivity</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Thermal Conductivity" value={ThermalConductivity} onChange={handleThermalConductivity} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="Melting Point">
+                            <Form.Label className='text-green-100 fs-4'>Melting Point</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Melting Point" value={MeltingPoint} onChange={handleMeltingPoint} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="Maximum Service TemperatureAir">
+                            <Form.Label className='text-green-100 fs-4'>Maximum Service Temperature Air</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Maximum Service Temperature Air" value={MaximumServiceTemperatureAir} onChange={handleMaximumServiceTemperatureAir} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="Deflection Temperature At 264 psi">
+                            <Form.Label className='text-green-100 fs-4'> Deflection Temperature At 264 psi</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Deflection Temperature At 264 psi" value={DeflectionTemperatureAt264psi} onChange={handleDeflectionTemperatureAt264psi} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="Deflection Temperature At 66 psi">
+                            <Form.Label className='text-green-100 fs-4'>Standart Width</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Resistance To Hydrocarbons" value={newRTH} onChange={handleDeflectionTemperatureAt66psi} />
+                        </Form.Group>
+
+
+                        <Form.Group className="mb-3" controlId="Vicat Softening Point">
+                            <Form.Label className='text-green-100 fs-4'>Vicat Softening Point</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Vicat Softening Point" value={VicatSofteningPoint} onChange={handleVicatSofteningPoint} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="Glass Transition Temp Tg">
+                            <Form.Label className='text-green-100 fs-4'>Glass Transition Temp Tg</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Glass Transition Temp Tg" value={GlassTransitionTempTg} onChange={handleGlassTransitionTempTg} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="Flammability UL 94">
+                            <Form.Label className='text-green-100 fs-4'>Flammability UL 94</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="Flammability UL 94" value={FlammabilityUL94} onChange={handleFlammabilityUL94} />
+                        </Form.Group>
+                    </Col>
+                    {/* Processing */}
+                    <Col className='border border-success' xs={6}>
+                        <h2 className="text-green-100">Processing Properties</h2>
+                        <Form.Group className="mb-3" controlId="ProcessingTemperature">
+                            <Form.Label className='text-green-100 fs-4'>ProcessingTemperature</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="ProcessingTemperature" value={ProcessingTemperature} onChange={handleProcessingTemperature} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="NozzleTemperature">
+                            <Form.Label className='text-green-100 fs-4'>NozzleTemperature</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="NozzleTemperature" value={NozzleTemperature} onChange={handleNozzleTemperature} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="AdapterTemperature">
+                            <Form.Label className='text-green-100 fs-4'>AdapterTemperature</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="AdapterTemperature" value={AdapterTemperature} onChange={handleAdapterTemperature} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="DieTemperature">
+                            <Form.Label className='text-green-100 fs-4'>DieTemperature</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="DieTemperature" value={DieTemperature} onChange={handleDieTemperature} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="MeltTemperature">
+                            <Form.Label className='text-green-100 fs-4'>MeltTemperature</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="MeltTemperature" value={MeltTemperature} onChange={handleMeltTemperature} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="MoldTemperature">
+                            <Form.Label className='text-green-100 fs-4'>MoldTemperature</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="MoldTemperature" value={MoldTemperature} onChange={handleMoldTemperature} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="DryingTemperature">
+                            <Form.Label className='text-green-100 fs-4'>DryingTemperature</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="DryingTemperature" value={DryingTemperature} onChange={handleDryingTemperature} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="MoistureContent">
+                            <Form.Label className='text-green-100 fs-4'>MoistureContent</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="MoistureContent" value={MoistureContent} onChange={handleMoistureContent} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="DewPoint">
+                            <Form.Label className='text-green-100 fs-4'>DewPoint</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="DewPoint" value={DewPoint} onChange={handleDewPoint} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="DryingAirFlowRate">
+                            <Form.Label className='text-green-100 fs-4'>DryingAirFlowRate</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="DryingAirFlowRate" value={DryingAirFlowRate} onChange={handleDryingAirFlowRate} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="InjectionPressure">
+                            <Form.Label className='text-green-100 fs-4'>InjectionPressure</Form.Label>
+                            <Form.Control type="text" className='fs-4' placeholder="InjectionPressure" value={InjectionPressure} onChange={handleInjectionPressure} />
+                        </Form.Group>
+                    </Col>
+                    {/* Physical */}
+                    <Col className='border border-success' xs={6}>
+                        <h2 className="text-green-100">Physical Properties</h2>
 
                         <Form.Group className="mb-3 " controlId="density">
                             <Form.Label className='text-green-100 fs-4'>Density</Form.Label>
@@ -623,73 +773,9 @@ export const CreateMaterial = () => {
 
 
                     </Col>
-                </Row>
-                <Row>
-                    <Col className='border border-success'>
-                        <h4 className="text-green-100">Descriptive Properties</h4>
-                        <Form.Group className="mb-3" controlId="Flame Support Resistance">
-                            <Form.Label className='text-green-100 fs-4'>Flame Support Ressistanve</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="Flame Support Resistance" value={newFSR} onChange={handleFSR} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="Resistance To Hydrocarbons">
-                            <Form.Label className='text-green-100 fs-4'>Resistance To Hydrocarbons</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="Resistance To Hydrocarbons" value={newRTH} onChange={handleRTH} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="Resistance To Oil">
-                            <Form.Label className='text-green-100 fs-4'>Resistance To Oil</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="Resistance To Hydrocarbons" value={newRTO} onChange={handleRTO} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="Standart Width">
-                            <Form.Label className='text-green-100 fs-4'>Standart Width</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="Standart Width" value={newSW} onChange={handleSW} />
-                        </Form.Group>
-                    </Col>
-
-                    <Col className='border border-success'>
-                        <h4 className="text-green-100">Thermal Properties</h4>
-                        <Form.Group className="mb-3" controlId="CTE Linear">
-                            <Form.Label className='text-green-100 fs-4'>CTE Linear</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="CTE Linear" value={CTELinear} onChange={handleCTELinear} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="Thermal Conductivity">
-                            <Form.Label className='text-green-100 fs-4'>Thermal Conductivity</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="Thermal Conductivity" value={ThermalConductivity} onChange={handleThermalConductivity} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="Melting Point">
-                            <Form.Label className='text-green-100 fs-4'>Melting Point</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="Melting Point" value={MeltingPoint} onChange={handleMeltingPoint} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="Maximum Service TemperatureAir">
-                            <Form.Label className='text-green-100 fs-4'>Maximum Service Temperature Air</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="Maximum Service Temperature Air" value={MaximumServiceTemperatureAir} onChange={handleMaximumServiceTemperatureAir} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="Deflection Temperature At 264 psi">
-                            <Form.Label className='text-green-100 fs-4'> Deflection Temperature At 264 psi</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="Deflection Temperature At 264 psi" value={DeflectionTemperatureAt264psi} onChange={handleDeflectionTemperatureAt264psi} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="Deflection Temperature At 66 psi">
-                            <Form.Label className='text-green-100 fs-4'>Standart Width</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="Resistance To Hydrocarbons" value={newRTH} onChange={handleDeflectionTemperatureAt66psi} />
-                        </Form.Group>
-
-
-                        <Form.Group className="mb-3" controlId="Vicat Softening Point">
-                            <Form.Label className='text-green-100 fs-4'>Vicat Softening Point</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="Vicat Softening Point" value={VicatSofteningPoint} onChange={handleVicatSofteningPoint} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="Glass Transition Temp Tg">
-                            <Form.Label className='text-green-100 fs-4'>Glass Transition Temp Tg</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="Glass Transition Temp Tg" value={GlassTransitionTempTg} onChange={handleGlassTransitionTempTg} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="Flammability UL 94">
-                            <Form.Label className='text-green-100 fs-4'>Flammability UL 94</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="Flammability UL 94" value={FlammabilityUL94} onChange={handleFlammabilityUL94} />
-                        </Form.Group>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className='border border-green-100'>
-                        <h4 className="text-green-100">Mechanical Properties</h4>
+                    {/* Mechanical */}
+                    <Col className='border border-success' xs={6}>
+                        <h2 className="text-green-100">Mechanical Properties</h2>
                         <Form.Group className="mb-3" controlId="HardnessRockwellR">
                             <Form.Label className='text-green-100 fs-4'>Hardness RockwellR</Form.Label>
                             <Form.Control type="text" className='fs-4' placeholder="Hardness RockwellR" value={HardnessRockwellR} onChange={handleHardnessRockwellR} />
@@ -845,92 +931,13 @@ export const CreateMaterial = () => {
 
 
                     </Col>
-                    <Col className='border border-green-100'>
-                        <h4 className="text-green-100">Optical Properties</h4>
-                        <Form.Group className="mb-3" controlId="Haze">
-                            <Form.Label className='text-green-100 fs-4'>Haze</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="Haze" value={haze} onChange={handleHaze} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="Gloss">
-                            <Form.Label className='text-green-100 fs-4'>Gloss</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="Haze" value={gloss} onChange={handleGloss} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="TransmissionVisible">
-                            <Form.Label className='text-green-100 fs-4'>Transmission Visible</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="Transmission Visible" value={transmissionVisible} onChange={handleTransmissionVisible} />
-                        </Form.Group>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className='border border-green-100'>
-                        <h4 className="text-green-100">Processing Properties</h4>
-                        <Form.Group className="mb-3" controlId="ProcessingTemperature">
-                            <Form.Label className='text-green-100 fs-4'>ProcessingTemperature</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="ProcessingTemperature" value={ProcessingTemperature} onChange={handleProcessingTemperature} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="NozzleTemperature">
-                            <Form.Label className='text-green-100 fs-4'>NozzleTemperature</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="NozzleTemperature" value={NozzleTemperature} onChange={handleNozzleTemperature} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="AdapterTemperature">
-                            <Form.Label className='text-green-100 fs-4'>AdapterTemperature</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="AdapterTemperature" value={AdapterTemperature} onChange={handleAdapterTemperature} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="DieTemperature">
-                            <Form.Label className='text-green-100 fs-4'>DieTemperature</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="DieTemperature" value={DieTemperature} onChange={handleDieTemperature} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="MeltTemperature">
-                            <Form.Label className='text-green-100 fs-4'>MeltTemperature</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="MeltTemperature" value={MeltTemperature} onChange={handleMeltTemperature} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="MoldTemperature">
-                            <Form.Label className='text-green-100 fs-4'>MoldTemperature</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="MoldTemperature" value={MoldTemperature} onChange={handleMoldTemperature} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="DryingTemperature">
-                            <Form.Label className='text-green-100 fs-4'>DryingTemperature</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="DryingTemperature" value={DryingTemperature} onChange={handleDryingTemperature} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="MoistureContent">
-                            <Form.Label className='text-green-100 fs-4'>MoistureContent</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="MoistureContent" value={MoistureContent} onChange={handleMoistureContent} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="DewPoint">
-                            <Form.Label className='text-green-100 fs-4'>DewPoint</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="DewPoint" value={DewPoint} onChange={handleDewPoint} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="DryingAirFlowRate">
-                            <Form.Label className='text-green-100 fs-4'>DryingAirFlowRate</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="DryingAirFlowRate" value={DryingAirFlowRate} onChange={handleDryingAirFlowRate} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="InjectionPressure">
-                            <Form.Label className='text-green-100 fs-4'>InjectionPressure</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="InjectionPressure" value={InjectionPressure} onChange={handleInjectionPressure} />
-                        </Form.Group>
-                    </Col>
-                    <Col className='border border-green-100'>
-                        <h4 className="text-green-100">Electrical Properties</h4>
-                        <Form.Group className="mb-3" controlId="ElectricalResistivity">
-                            <Form.Label className='text-green-100 fs-4'>ElectricalResistivity</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="ElectricalResistivity" value={ElectricalResistivity} onChange={handleElectricalResistivity} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="SurfaceResistance">
-                            <Form.Label className='text-green-100 fs-4'>SurfaceResistance</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="SurfaceResistance" value={SurfaceResistance} onChange={handleSurfaceResistance} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="DielectricConstant">
-                            <Form.Label className='text-green-100 fs-4'>DielectricConstant</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="DielectricConstant" value={DielectricConstant} onChange={handleDielectricConstant} />
-                        </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="DissipationFactor">
-                            <Form.Label className='text-green-100 fs-4'>DissipationFactor</Form.Label>
-                            <Form.Control type="text" className='fs-4' placeholder="DissipationFactor" value={DissipationFactor} onChange={handleDissipationFactor} />
-                        </Form.Group>
 
-                    </Col>
+
+
+
                 </Row>
+
                 <div className="d-grid">
                     <Button variant="primary" type="submit" className='mb-5 mt-3 fs-4'>
                         Submit
@@ -941,7 +948,7 @@ export const CreateMaterial = () => {
             </Form>
 
 
-        </Container>
+        </Container >
 
 
 
