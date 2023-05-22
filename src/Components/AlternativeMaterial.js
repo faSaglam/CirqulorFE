@@ -12,7 +12,10 @@ export function AlternativeMaterial() {
         <Container className='mt-5 p-3' >
             <Row>
                 <Col md={1} xxs={12} >
-                    <img src={aml} alt="aml" style={{ maxHeight: "100px", maxWidth: "100px" }} />
+                    <a href="/" >
+                        <img src={aml} alt="aml" style={{ maxHeight: "100px", maxWidth: "100px" }} />
+                    </a>
+
                 </Col>
                 <Col md={11}>
                     <h2 className='text-start text-light fw-bold'>Alternative Materials Library</h2>

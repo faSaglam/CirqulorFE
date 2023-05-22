@@ -20,7 +20,7 @@ function App() {
 
 
   return (
-    <div style={{}}>
+    <div >
       <NavBar />
       <AlternativeMaterial />
 

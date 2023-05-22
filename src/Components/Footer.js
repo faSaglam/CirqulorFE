@@ -9,31 +9,31 @@ import {
 export const Footer = () => {
 
     return (
-        <Navbar bg="green-400 m-0" >
-            <Container fluid>
-                <Row >
-                    <Col className='text-green-100 me-5'>
+        <div className="bg-green-400" >
+            <Container fluid="xl" >
+                <Row className="d-flex justify-content-between" >
+                    <Col className='text-green-100  ' sm={4} md={2} >
                         <Nav.Item className='fw-bold'>Live!</Nav.Item>
                         <Nav.Item><a style={{ textDecoration: "none" }} className="text-green-100" href='https://cirqulor.com/2022/10/18/cirqulor-2030/'>20in30 Podcast</a></Nav.Item>
                         <Nav.Item className='fw-bold'>Coming Soon</Nav.Item>
                         <Nav.Item className='text-light'>Webinar on Waste</Nav.Item>
                     </Col>
-                    <Col className='text-green-100 me-5 ms-5'>
+                    <Col className='text-green-100 ' sm={4} md={2}>
                         <Nav.Item className='fw-bold'> Resources</Nav.Item>
                         <Nav.Item><a style={{ textDecoration: "none" }} className="text-green-100" href='https://cirqulor.com/blog/'>360° </a></Nav.Item>
                     </Col>
-                    <Col className='text-green-100 me-5 ms-5'>
+                    <Col className='text-green-100  ' sm={4} md={2} >
                         <Nav.Item className='fw-bold'>About</Nav.Item>
                         <Nav.Item><a style={{ textDecoration: "none" }} className="text-green-100" href='https://cirqulor.com/cirqulor%20platform/'>CirQulor</a></Nav.Item>
                         <Nav.Item><a style={{ textDecoration: "none" }} className="text-green-100" href='https://cirqulor.com/plastics/'>Why alternative-to-plastic materials?</a></Nav.Item>
                         <Nav.Item><a style={{ textDecoration: "none" }} className="text-green-100" href='https://cirqulor.com/values/'>CirQulor values</a></Nav.Item>
                         <Nav.Item><a style={{ textDecoration: "none" }} className="text-green-100" href='https://cirqulor.com/sdg/'>United Nations SDGs</a></Nav.Item>
                     </Col>
-                    <Col className='text-green-100 me-5 ms-5'>
+                    <Col className='text-green-100 ' sm={4} md={2}>
                         <Nav.Item className='fw-bold'>Join us</Nav.Item>
                         <Nav.Item><a style={{ textDecoration: "none" }} className="text-green-100" href='https://cirqulor.com/career/'>Careers</a></Nav.Item>
                     </Col>
-                    <Col className='text-green-100 me-5 ms-5'>
+                    <Col className='text-green-100 ' sm={4} md={2} >
                         <Nav.Item className='fw-bold'>Contact</Nav.Item>
                         <Nav.Item><a style={{ textDecoration: "none" }} className="text-green-100" href='https://cirqulor.com/contact/'>General enquiries</a></Nav.Item>
                         <Nav.Item><a style={{ textDecoration: "none" }} className="text-green-100" href='https://cirqulor.com/collaborate/'>Collaborate</a></Nav.Item>
@@ -41,7 +41,7 @@ export const Footer = () => {
                         <Nav.Item><a style={{ textDecoration: "none" }} className="text-green-100" href='https://cirqulor.com/partner-contact/'>Partner</a></Nav.Item>
                         <Nav.Item><a style={{ textDecoration: "none" }} className="text-green-100" href='https://cirqulor.com/media/'>Media</a></Nav.Item>
                     </Col>
-                    <Col className='text-green-100 ms-5 '>
+                    <Col className='text-green-100 ' sm={4} md={2}>
 
                         <Nav.Item><a style={{ textDecoration: "none" }} className="text-green-100" href='https://cirqulor.com/privacy/'>Privacy Policy</a></Nav.Item>
                         <Nav.Item><a style={{ textDecoration: "none" }} className="text-green-100" href='https://cirqulor.com/privacy/'>Cookie Policy </a></Nav.Item>
@@ -63,7 +63,7 @@ export const Footer = () => {
 
                 </Row>
             </Container>
-        </Navbar >
+        </div >
     )
 
 

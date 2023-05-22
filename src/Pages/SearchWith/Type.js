@@ -19,7 +19,7 @@ export const SearchWithType = () => {
     }
     if (loading === true) {
         return (
-            <Container className="d-flext justify-content-center" >
+            <Container className="d-flext justify-content-center" style={{ minHeight: "100vh" }}>
                 <Row>
                     <Col xs={12}>  <SpinnerComponent /></Col>
                 </Row>

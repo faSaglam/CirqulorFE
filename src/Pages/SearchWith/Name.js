@@ -30,7 +30,7 @@ export const SearchWithName = () => {
         )
     }
     return (
-        <Container fluid >
+        <Container fluid style={{ minHeight: "100vh" }} >
             <Row>
                 <Col xs={4}>
                     <Name onSupplier={handleSupplierList} onNom={handleNom} />
