@@ -5,12 +5,13 @@ import { Container, Col, Row } from "react-bootstrap"
 
 export const MaterialsOfProducer = () => {
     const routeParams = useParams()
-    console.log(routeParams)
-    console.log("hello")
+
+
     useEffect(() => {
 
         getById(routeParams.id).then(res => {
             setMaterial(res)
+
 
 
             setProperties(

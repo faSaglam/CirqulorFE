@@ -118,11 +118,7 @@ export const Material = ({ material }) => {
 
     }, [material])
 
-    // if (material === null && properties === null) {
-    //     return (
-    //         <p>Loading</p>
-    //     )
-    // }
+
 
 
     return (

@@ -41,6 +41,15 @@ export function MainPage() {
                         </Row>
                     </a>
                 </ListGroup.Item>
+                <ListGroup.Item className="mt-4 pt-4" style={{ backgroundColor: "transparent", borderBottom: "#34c0eb 2px dotted" }} >
+                    <a href='/CreateMaterial' className='text-warning fw-bold fs-4' style={{ textDecoration: "none" }}>
+                        <Row>
+                            <Col> <span>Would you like to add </span></Col>
+                            <Col><span  >Material?</span></Col>
+                            <Col className='text-end'> <BsFillPlayCircleFill style={{ color: "yellow", fontSize: "32px" }} /></Col>
+                        </Row>
+                    </a>
+                </ListGroup.Item>
 
             </ListGroup>
 
