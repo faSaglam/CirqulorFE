@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f3735557.css",
+    "main.js": "/static/js/main.a75ae3b9.js",
+    "static/js/787.312844d4.chunk.js": "/static/js/787.312844d4.chunk.js",
+    "static/media/cq_logo_frame 2.png": "/static/media/cq_logo_frame 2.8ab7fc57679e274efdbd.png",
+    "index.html": "/index.html",
+    "main.f3735557.css.map": "/static/css/main.f3735557.css.map",
+    "main.a75ae3b9.js.map": "/static/js/main.a75ae3b9.js.map",
+    "787.312844d4.chunk.js.map": "/static/js/787.312844d4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3735557.css",
+    "static/js/main.a75ae3b9.js"
+  ]
+}
