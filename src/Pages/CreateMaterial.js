@@ -239,6 +239,10 @@ export const CreateMaterial = () => {
 
             }
         }
+        if (materialObj.NameOfMaterial === undefined) {
+            alert("You must select a name of material")
+            return
+        }
         postMaterial(materialObj)
         alert("Material is added")
         const redirectUrl = `/SearchWith/Name/${materialObj.NameOfMaterial}`
@@ -258,6 +262,8 @@ export const CreateMaterial = () => {
 
 
     const handleNOM = (e) => {
+
+
         setNewNameOfMaterial(e.target.value)
 
     }
@@ -267,42 +273,42 @@ export const CreateMaterial = () => {
 
 
     const handleDenstiy = (e) => {
-        setNewDensity(e.target.value)
+        setNewDensity(e.target.value + " g/cc")
 
 
     }
 
     const handleThickness = (e) => {
-        setnewThickness(e.target.value)
+        setnewThickness(e.target.value + " microns")
 
 
     }
     const handleMAE = (e) => {
-        setNewMAE(e.target.value)
+        setNewMAE(e.target.value + "%")
 
     }
     const handleAL = (e) => {
-        setNewAL(e.target.value)
+        setNewAL(e.target.value + "%")
 
     }
     const handleMVT = (e) => {
-        setNewMVT(e.target.value)
+        setNewMVT(e.target.value + " cc-mm/m²-24hr-atm")
 
     }
     const handleWVT = (e) => {
-        setNewWVT(e.target.value)
+        setNewWVT(e.target.value + " g/m²/day")
 
     }
     const handleOT = (e) => {
-        setNewOT(e.target.value)
+        setNewOT(e.target.value + " cc-mm/m²-24hr-atm")
 
     }
     const handleNT = (e) => {
-        setNewNT(e.target.value)
+        setNewNT(e.target.value + " cc-mm/m²-24hr-atm")
 
     }
     const handleCT = (e) => {
-        setNewCT(e.target.value)
+        setNewCT(e.target.value + " cc-mm/m²-24hr-atm")
 
     }
     const handleMaxMC = (e) => {
@@ -310,15 +316,15 @@ export const CreateMaterial = () => {
 
     }
     const handleLinearMST = (e) => {
-        setNewLinearMST(e.target.value)
+        setNewLinearMST(e.target.value + " cm/cm")
 
     }
     const handleLinearMS = (e) => {
-        setNewLMS(e.target.value)
+        setNewLMS(e.target.value + " cm/cm")
 
     }
     const handleMeltFlow = (e) => {
-        setNewMeltFlow(e.target.value)
+        setNewMeltFlow(e.target.value + " g/10 min")
 
     }
     //#endregion
@@ -335,35 +341,35 @@ export const CreateMaterial = () => {
         setNewRTO(e.target.value)
     }
     const handleSW = (e) => {
-        setNewSW(e.target.value)
+        setNewSW(e.target.value + " cm")
     }
     //#endregion
 
     //#region thermal handlers
     const handleCTELinear = (e) => {
-        setCTELinear(e.target.value)
+        setCTELinear(e.target.value + " µm/m-°C")
     }
     const handleThermalConductivity = (e) => {
-        setThermalConductivity(e.target.value)
+        setThermalConductivity(e.target.value + " W/m-K")
     }
     const handleMeltingPoint = (e) => {
-        setMeltingPoint(e.target.value)
+        setMeltingPoint(e.target.value + " °C")
     }
     const handleMaximumServiceTemperatureAir = (e) => {
-        setMaximumServiceTemperatureAir(e.target.value)
+        setMaximumServiceTemperatureAir(e.target.value + "°C")
     }
     const handleDeflectionTemperatureAt264psi = (e) => {
-        setDeflectionTemperatureAt264psi(e.target.value)
+        setDeflectionTemperatureAt264psi(e.target.value + " °C")
     }
     const handleDeflectionTemperatureAt66psi = (e) => {
-        setDeflectionTemperatureAt66psi(e.target.value)
+        setDeflectionTemperatureAt66psi(e.target.value + " °C")
     }
     const handleVicatSofteningPoint = (e) => {
-        setVicatSofteningPoint(e.target.value)
+        setVicatSofteningPoint(e.target.value + " °C")
     }
 
     const handleGlassTransitionTempTg = (e) => {
-        setGlassTransitionTempTg(e.target.value)
+        setGlassTransitionTempTg(e.target.value + " °C")
     }
     const handleFlammabilityUL94 = (e) => {
         setFlammabilityUL94(e.target.value)
@@ -375,64 +381,64 @@ export const CreateMaterial = () => {
         setHardnessRockwellR(e.target.value)
     }
     const handleBallIndentationHardness = (e) => {
-        setBallIndentationHardness(e.target.value)
+        setBallIndentationHardness(e.target.value + " MPa")
     }
     const handleTensileStrengthUltimate = (e) => {
-        setTensileStrengthUltimate(e.target.value)
+        setTensileStrengthUltimate(e.target.value + " MPa")
     }
     const handleFilmTensileStrengthAtYieldMD = (e) => {
-        setFilmTensileStrengthAtYieldMD(e.target.value)
+        setFilmTensileStrengthAtYieldMD(e.target.value + " MPa")
     }
     const handleFilmTensileStrengthAtYieldTD = (e) => {
-        setFilmTensileStrengthAtYieldTD(e.target.value)
+        setFilmTensileStrengthAtYieldTD(e.target.value + " MPa")
     }
     const handleTensileStrengthYield = (e) => {
-        setTensileStrengthYield(e.target.value)
+        setTensileStrengthYield(e.target.value + " MPa")
     }
     const handleFilmElongationAtBreakMD = (e) => {
-        setFilmElongationAtBreakMD(e.target.value)
+        setFilmElongationAtBreakMD(e.target.value + " %")
     }
     const handleElongationAtBreak = (e) => {
-        setElongationAtBreak(e.target.value)
+        setElongationAtBreak(e.target.value + " %")
     }
     const handleElongationAtYield = (e) => {
-        setElongationAtYield(e.target.value)
+        setElongationAtYield(e.target.value + " %")
     }
     const handleModulusOfElasticity = (e) => {
-        setModulusOfElasticity(e.target.value)
+        setModulusOfElasticity(e.target.value + " GPa")
     }
     const handleTenacity = (e) => {
-        setTenacity(e.target.value)
+        setTenacity(e.target.value + " N/tex")
     }
     const handleFlexuralYieldStrength = (e) => {
-        setFlexuralYieldStrength(e.target.value)
+        setFlexuralYieldStrength(e.target.value + " GPa")
     }
     const handleFlexuralModulus = (e) => {
-        setFlexuralModulus(e.target.value)
+        setFlexuralModulus(e.target.value + " GPa")
     }
     const handleFlexuralStrainAtBreak = (e) => {
-        setFlexuralStrainAtBreak(e.target.value)
+        setFlexuralStrainAtBreak(e.target.value + " %")
     }
     const handleSecantModulus = (e) => {
-        setSecantModulus(e.target.value)
+        setSecantModulus(e.target.value + " GPa")
     }
     const handleSecantModulusMD = (e) => {
-        setSecantModulusMD(e.target.value)
+        setSecantModulusMD(e.target.value + " GPa")
     }
     const handleSecantModulusTD = (e) => {
-        setSecantModulusTD(e.target.value)
+        setSecantModulusTD(e.target.value + " GPa")
     }
     const handleIzodImpactNotchedISO = (e) => {
-        setIzodImpactNotchedISO(e.target.value)
+        setIzodImpactNotchedISO(e.target.value + " kJ/m²")
     }
     const handleIzodImpactUnnotchedISO = (e) => {
-        setIzodImpactUnnotchedISO(e.target.value)
+        setIzodImpactUnnotchedISO(e.target.value + " kJ/m²")
     }
     const handleCharpyImpactUnnotched = (e) => {
-        setCharpyImpactUnnotched(e.target.value)
+        setCharpyImpactUnnotched(e.target.value + " J/cm²")
     }
     const handleCharpyImpactNotched = (e) => {
-        setCharpyImpactNotched(e.target.value)
+        setCharpyImpactNotched(e.target.value + " J/cm²")
     }
     const handleCoefficientOfFriction = (e) => {
         setCoefficientOfFriction(e.target.value)
@@ -441,25 +447,25 @@ export const CreateMaterial = () => {
         setCoefficientOfFrictionStatic(e.target.value)
     }
     const handleTearStrength = (e) => {
-        setTearStrength(e.target.value)
+        setTearStrength(e.target.value + "  kN/m")
     }
     const handleElmendorfTearStrengthMD = (e) => {
-        setElmendorfTearStrengthMD(e.target.value)
+        setElmendorfTearStrengthMD(e.target.value + " g")
     }
     const handleElmendorfTearStrengthTD = (e) => {
-        setElmendorfTearStrengthTD(e.target.value)
+        setElmendorfTearStrengthTD(e.target.value + " g")
     }
     const handleDartDropTotalEnergy = (e) => {
-        setDartDropTotalEnergy(e.target.value)
+        setDartDropTotalEnergy(e.target.value + " J/cm")
     }
     const handleDartDropTest = (e) => {
-        setDartDropTest(e.target.value)
+        setDartDropTest(e.target.value + " g")
     }
     const handleFilmTensileStrengthAtBreakMD = (e) => {
-        setFilmTensileStrengthAtBreakMD(e.target.value)
+        setFilmTensileStrengthAtBreakMD(e.target.value + " MPa")
     }
     const handleFilmTensileStrengthAtBreakTD = (e) => {
-        setFilmTensileStrengthAtBreakTD(e.target.value)
+        setFilmTensileStrengthAtBreakTD(e.target.value + " MPa")
     }
     const handleHardnessShoreA = (e) => {
         setHardnessShoreA(e.target.value)
@@ -468,62 +474,62 @@ export const CreateMaterial = () => {
         setHardnessShoreD(e.target.value)
     }
     const handleFilmElongationAtBreakTD = (e) => {
-        setFilmElongationAtBreakTD(e.target.value)
+        setFilmElongationAtBreakTD(e.target.value + " %")
     }
     const handleIzodImpactNotched = (e) => {
-        setIzodImpactNotched(e.target.value)
+        setIzodImpactNotched(e.target.value + " J/cm")
     }
     const handleIzodImpactUnnotched = (e) => {
-        setIzodImpactUnnotched(e.target.value)
+        setIzodImpactUnnotched(e.target.value + " J/cm")
     }
     //#endregion
 
     //#region optical handlers
     const handleHaze = (e) => {
-        setHaze(e.target.value)
+        setHaze(e.target.value + " %")
     }
     const handleGloss = (e) => {
-        setGloss(e.target.value)
+        setGloss(e.target.value + " %")
     }
     const handleTransmissionVisible = (e) => {
-        setTransmissionVisible(e.target.value)
+        setTransmissionVisible(e.target.value + " %")
     }
     //#endregion
 
     //#region proccessing handlers
     const handleProcessingTemperature = (e) => {
-        setProcessingTemperature(e.target.value)
+        setProcessingTemperature(e.target.value + " °C")
     }
     const handleNozzleTemperature = (e) => {
-        setNozzleTemperature(e.target.value)
+        setNozzleTemperature(e.target.value + " °C")
     }
     const handleDryingTemperature = (e) => {
-        setDryingTemperature(e.target.value)
+        setDryingTemperature(e.target.value + " °C")
     }
 
     const handleAdapterTemperature = (e) => {
-        setAdapterTemperature(e.target.value)
+        setAdapterTemperature(e.target.value + " °C")
     }
     const handleDieTemperature = (e) => {
-        setDieTemperature(e.target.value)
+        setDieTemperature(e.target.value + " °C")
     }
     const handleMoistureContent = (e) => {
-        setMoistureContent(e.target.value)
+        setMoistureContent(e.target.value + " %")
     }
     const handleDewPoint = (e) => {
-        setDewPoint(e.target.value)
+        setDewPoint(e.target.value + " °C")
     }
     const handleDryingAirFlowRate = (e) => {
-        setDryingAirFlowRate(e.target.value)
+        setDryingAirFlowRate(e.target.value + " °C")
     }
     const handleInjectionPressure = (e) => {
-        setInjectionPressure(e.target.value)
+        setInjectionPressure(e.target.value + " MPa")
     }
     const handleMeltTemperature = (e) => {
-        setMeltTemperature(e.target.value)
+        setMeltTemperature(e.target.value + " °C")
     }
     const handleMoldTemperature = (e) => {
-        setMoldTemperature(e.target.value)
+        setMoldTemperature(e.target.value + " °C")
     }
 
 
@@ -531,7 +537,7 @@ export const CreateMaterial = () => {
 
     //#region  electrical handlers
     const handleElectricalResistivity = (e) => {
-        setElectricalResistivity(e.target.value)
+        setElectricalResistivity(e.target.value + " ohm/cm")
     }
     const handleSurfaceResistance = (e) => {
         setSurfaceResistance(e.target.value)
@@ -633,21 +639,21 @@ export const CreateMaterial = () => {
                                 <Accordion.Header>   <h2 className="text-green-100">Electrical Properties</h2></Accordion.Header>
                                 <Accordion.Body>
                                     <Form.Group className="mb-3" controlId="ElectricalResistivity">
-                                        <Form.Label className='text-green-100 fs-4'>ElectricalResistivity</Form.Label>
-                                        <Form.Control type="text" className='fs-4' placeholder="ElectricalResistivity" value={ElectricalResistivity} onChange={handleElectricalResistivity} />
+                                        <Form.Label className='text-green-100 fs-4'>Electrical Resistivity</Form.Label>
+                                        <Form.Control type="text" className='fs-4' placeholder="Electrical Resistivity" value={ElectricalResistivity} onChange={handleElectricalResistivity} />
                                     </Form.Group>
                                     <Form.Group className="mb-3" controlId="SurfaceResistance">
-                                        <Form.Label className='text-green-100 fs-4'>SurfaceResistance</Form.Label>
-                                        <Form.Control type="text" className='fs-4' placeholder="SurfaceResistance" value={SurfaceResistance} onChange={handleSurfaceResistance} />
+                                        <Form.Label className='text-green-100 fs-4'>Surface Resistance</Form.Label>
+                                        <Form.Control type="text" className='fs-4' placeholder="Surface Resistance" value={SurfaceResistance} onChange={handleSurfaceResistance} />
                                     </Form.Group>
                                     <Form.Group className="mb-3" controlId="DielectricConstant">
-                                        <Form.Label className='text-green-100 fs-4'>DielectricConstant</Form.Label>
-                                        <Form.Control type="text" className='fs-4' placeholder="DielectricConstant" value={DielectricConstant} onChange={handleDielectricConstant} />
+                                        <Form.Label className='text-green-100 fs-4'>Dielectric Constant</Form.Label>
+                                        <Form.Control type="text" className='fs-4' placeholder="Dielectric Constant" value={DielectricConstant} onChange={handleDielectricConstant} />
                                     </Form.Group>
 
                                     <Form.Group className="mb-3" controlId="DissipationFactor">
-                                        <Form.Label className='text-green-100 fs-4'>DissipationFactor</Form.Label>
-                                        <Form.Control type="text" className='fs-4' placeholder="DissipationFactor" value={DissipationFactor} onChange={handleDissipationFactor} />
+                                        <Form.Label className='text-green-100 fs-4'>Dissipation Factor</Form.Label>
+                                        <Form.Control type="text" className='fs-4' placeholder="Dissipation Factor" value={DissipationFactor} onChange={handleDissipationFactor} />
                                     </Form.Group></Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
@@ -984,10 +990,7 @@ export const CreateMaterial = () => {
                                         <Form.Label className='text-green-100 fs-4'>Izod Impact Unnotched</Form.Label>
                                         <Form.Control type="text" className='fs-4' placeholder="Izod Impact Unnotched" value={IzodImpactUnnotched} onChange={handleIzodImpactUnnotched} />
                                     </Form.Group>
-                                    <Form.Group className="mb-3" controlId="IzodImpactUnnotched">
-                                        <Form.Label className='text-green-100 fs-4'>Izod Impact Unnotched</Form.Label>
-                                        <Form.Control type="text" className='fs-4' placeholder="Izod Impact Unnotched" value={IzodImpactUnnotched} onChange={handleIzodImpactUnnotched} />
-                                    </Form.Group>
+
 
                                 </Accordion.Body>
                             </Accordion.Item>

@@ -2,7 +2,7 @@ import axios from 'axios'
 // const baseUrl = 'https://cirqulor20230316144753.azurewebsites.net/api/base/list'
 const baseUrl = "https://lneuchmmydtxvcohcjuj2prp4m0nxmaw.lambda-url.eu-north-1.on.aws/api"
 const withOutApi = "https://lneuchmmydtxvcohcjuj2prp4m0nxmaw.lambda-url.eu-north-1.on.aws"
-const testUrl = "http://localhost:13542/api/"
+// const testUrl = "http://localhost:13542/api/"
 const getListByName = async (name) => {
     const request = await axios.get(withOutApi + "/nameofmaterials/" + name)
 
@@ -20,8 +20,8 @@ const getAllSuppliers = async () => {
 }
 
 const postMaterial = async (data) => {
-    const req = await axios.post(testUrl + "MaterialsOfProducer", data)
-    console.log(data)
+    const req = await axios.post(baseUrl + "/MaterialsOfProducer", data)
+
     return req
 
 }
