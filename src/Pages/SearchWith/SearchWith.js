@@ -32,7 +32,7 @@ export function SearchWith() {
             <Container style={{ minHeight: "100vh" }} className="m-auto" >
                 <Row>
                     <BioBaseList onLoading={handleLoading} />
-                    < Col xs={4}>
+                    < Col xs={3}>
                         <SearchBar onQuery={handleQueries} />
                         <Result onSearch={query2} />
                     </Col>
@@ -125,8 +125,8 @@ const BioBaseList = ({ onLoading }) => {
         <>
             {bioBase.map((item) =>
 
-            (<Col key={item.id} className="mb-2" xs={4}>
-                <h3 className="text-center" style={{ color: item.name === "Bio Plastics" ? "#84BB25" : "#FC5E05" }}>{item.name}</h3>
+            (<Col key={item.id} className="mb-2" xs={3}>
+                <h3 className="text-center" style={{ color: "#84BB25" }}>{item.name}</h3>
                 <BioBase id={item.id} />
             </Col>
 
@@ -146,8 +146,18 @@ const BioBase = ({ id }) => {
         getBioBasedById(id).then(res => {
 
             setTypes(res.typeOfMaterialList)
+
         })
     }, [id])
+    console.log(id, types)
+
+    if (types.length === 0) {
+        console.log("types", types)
+        return (
+            <div className="text-center"> <p className="text-warning fw-bold fs-3"> Under Study</p></div>
+
+        )
+    }
 
     return (
         <div style={{ minHeight: "70vh" }}>
